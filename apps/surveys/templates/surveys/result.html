@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "surveys/style.css" %}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="info">
+        <h4> Submitted info </h4>
+        <div class="left">
+          <p> Name:</p>
+          <p> Dojo Location:</p>
+          <p> Favorite Language:</p>
+          <p> Comment:</p>
+        </div>
+        <div class="right">
+          <p> {{request.session.result.name}} </p>
+          <p> {{request.session.result.location}} </p>
+          <p> {{request.session.result.language}} </p>
+          <p> {{request.session.result.description}} </p>
+        </div> 
+        <a href="/" class="back_button">go back</a>
+      </div>
+    </div>
+  </body>
+</html>
